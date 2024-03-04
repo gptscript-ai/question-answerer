@@ -5,7 +5,7 @@ Question-Answerer is a wrapper around the [GPTScript search tools](https://githu
 Example:
 
 ```bash
-gptscript --cache=false question-answerer-ddg.gpt --question="Who were the first people to climb Mount Everest?"
+gptscript --sub-tool=question-answerer-ddg --cache=false tool.gpt --question="Who were the first people to climb Mount Everest?"
 ```
 
 Response:
@@ -23,10 +23,26 @@ There has been speculation about whether George Mallory and Andrew Irvine might 
 
 ## Setup and Usage
 
-First, follow the setup instructions for the [GPTScript search tools](https://github.com/gptscript-ai/search/blob/main/README.md).
-Then, move the corresponding `question-answerer` gptscript file to the cloned `search` repo's root directory.
-You can then run it like `gptscript question-answerer-<engine>.gpt --question"<question>"`, or provide it as a tool to another gptscript.
+```bash
+# Clone the search tools repo
+git clone https://github.com/gptscript-ai/search.git
 
-## Known Issue
+# Build it
+(cd search && make build)
 
-Depending on the contents of the web pages that are returned, the script may end up surpassing OpenAI's 128k context window. Try running it again (and possibly altering your question) to keep it below the limit.
+# Clone this repo
+git clone https://github.com/gptscript-ai/question-answerer.git
+
+# Set up the venv
+cd question-answerer
+python3 -m venv .venv
+
+# Source it
+source .venv/bin/activate
+
+# Install the packages
+pip3 install -r requirements.txt
+
+# Run the tool
+gptscript --sub-tool="question-answerer-ddg" --cache=false tool.gpt --question="Who were the first people to climb Mount Everest?"
+```
