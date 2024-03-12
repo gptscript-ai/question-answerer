@@ -2,7 +2,7 @@ name: question-answerer-bing
 temperature: 0.1
 description: I can answer any question by searching the Internet.
 args: question: The question to ask.
-tools: bing from ../search/tool.gpt, html2text
+tools: bing from github.com/gptscript-ai/search, html2text
 
 Use Bing to search for answers to the question: $question.
 
@@ -22,7 +22,7 @@ name: question-answerer-brave
 temperature: 0.1
 description: I can answer any question by searching the Internet.
 args: question: The question to ask.
-tools: brave from ../search/tool.gpt, html2text
+tools: brave from github.com/gptscript-ai/search, html2text
 
 Use Brave to search for answers to the question: $question.
 
@@ -42,7 +42,7 @@ name: question-answerer-ddg
 temperature: 0.1
 description: I can answer any question by searching the Internet.
 args: question: The question to ask.
-tools: duckduckgo from ../search/tool.gpt, html2text
+tools: duckduckgo from github.com/gptscript-ai/search, html2text
 
 Use DuckDuckGo to search for answers to the question: $question.
 
@@ -62,7 +62,7 @@ name: question-answerer-google
 temperature: 0.1
 description: I can answer any question by searching the Internet.
 args: question: The question to ask.
-tools: google from ../search/tool.gpt, html2text
+tools: google from github.com/gptscript-ai/search, html2text
 
 Use Google to search for answers to the question: $question.
 

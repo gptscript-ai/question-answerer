@@ -5,7 +5,7 @@ Question-Answerer is a wrapper around the [GPTScript search tools](https://githu
 Example:
 
 ```bash
-gptscript --sub-tool=question-answerer-ddg --cache=false tool.gpt --question="Who were the first people to climb Mount Everest?"
+gptscript --sub-tool=question-answerer-ddg --cache=false github.com/gptscript-ai/question-answerer --question="Who were the first people to climb Mount Everest?"
 ```
 
 Response:
@@ -21,15 +21,23 @@ The first people to climb Mount Everest were New Zealander Edmund Hillary and Ne
 There has been speculation about whether George Mallory and Andrew Irvine might have reached the summit before Hillary and Norgay during their 1924 expedition. Mallory's body was found in 1999, but Irvine's remains and the camera they carried have never been discovered. Some believe that if the camera were found, it might provide evidence of whether they reached the summit. However, the route they took was extremely challenging, and while it's possible they might have reached the summit, it is considered unlikely by many.
 ```
 
-## Setup and Usage
+## Usage
+
+The easiest way to use these tools is to reference them by their GitHub repo in a command or in a script:
 
 ```bash
-# Clone the search tools repo
-git clone https://github.com/gptscript-ai/search.git
+gptscript --sub-tool=question-answerer-ddg --cache=false github.com/gptscript-ai/question-answerer --question="Who were the first people to climb Mount Everest?"
+```
 
-# Build it
-(cd search && make build)
+```yaml
+tools: question-answerer-ddg from github.com/gptscript-ai/question-answerer
 
+Who were the first people to climb Mount Everest? Use the question-answerer tool to answer.
+```
+
+You can also clone the repo and run the tool:
+
+```bash
 # Clone this repo
 git clone https://github.com/gptscript-ai/question-answerer.git
 
