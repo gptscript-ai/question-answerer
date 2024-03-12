@@ -1,6 +1,6 @@
 name: question-answerer-bing
 temperature: 0.1
-description: I can answer any question by searching the Internet.
+description: Answers any question by searching the Internet.
 args: question: The question to ask.
 tools: bing from github.com/gptscript-ai/search, html2text
 
@@ -20,7 +20,7 @@ Follow standard Markdown formatting.
 ---
 name: question-answerer-brave
 temperature: 0.1
-description: I can answer any question by searching the Internet.
+description: Answers any question by searching the Internet.
 args: question: The question to ask.
 tools: brave from github.com/gptscript-ai/search, html2text
 
@@ -40,7 +40,7 @@ Follow standard Markdown formatting.
 ---
 name: question-answerer-ddg
 temperature: 0.1
-description: I can answer any question by searching the Internet.
+description: Answers any question by searching the Internet.
 args: question: The question to ask.
 tools: duckduckgo from github.com/gptscript-ai/search, html2text
 
@@ -60,7 +60,7 @@ Follow standard Markdown formatting.
 ---
 name: question-answerer-google
 temperature: 0.1
-description: I can answer any question by searching the Internet.
+description: Answers any question by searching the Internet.
 args: question: The question to ask.
 tools: google from github.com/gptscript-ai/search, html2text
 
