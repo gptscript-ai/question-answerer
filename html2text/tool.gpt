@@ -1,0 +1,4 @@
+description: converts a webpage to plain text
+args: url: The URL of the webpage to convert
+
+#!python3 ${GPTSCRIPT_TOOL_DIR}/main.py

@@ -23,34 +23,14 @@ There has been speculation about whether George Mallory and Andrew Irvine might 
 
 ## Usage
 
-The easiest way to use these tools is to reference them by their GitHub repo in a command or in a script:
+The easiest way to use these tools in a command or `.gpt` script is to reference them by their GitHub repo and path:
 
 ```bash
-gptscript --sub-tool=question-answerer-ddg --cache=false github.com/gptscript-ai/question-answerer --question="Who were the first people to climb Mount Everest?"
+gptscript --cache=false github.com/gptscript-ai/question-answerer/duckduckgo --question="Who were the first people to climb Mount Everest?"
 ```
 
 ```yaml
-tools: question-answerer-ddg from github.com/gptscript-ai/question-answerer
+tools: github.com/gptscript-ai/question-answerer/duckduckgo
 
 Who were the first people to climb Mount Everest? Use the question-answerer tool to answer.
-```
-
-You can also clone the repo and run the tool:
-
-```bash
-# Clone this repo
-git clone https://github.com/gptscript-ai/question-answerer.git
-
-# Set up the venv
-cd question-answerer
-python3 -m venv .venv
-
-# Source it
-source .venv/bin/activate
-
-# Install the packages
-pip3 install -r requirements.txt
-
-# Run the tool
-gptscript --sub-tool="question-answerer-ddg" --cache=false tool.gpt --question="Who were the first people to climb Mount Everest?"
 ```
