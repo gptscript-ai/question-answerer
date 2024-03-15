@@ -5,7 +5,7 @@ Question-Answerer is a wrapper around the [GPTScript search tools](https://githu
 Example:
 
 ```bash
-gptscript --sub-tool=question-answerer-ddg --cache=false github.com/gptscript-ai/question-answerer --question="Who were the first people to climb Mount Everest?"
+gptscript --cache=false github.com/gptscript-ai/question-answerer/duckduckgo --question="Who were the first people to climb Mount Everest?"
 ```
 
 Response:
