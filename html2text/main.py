@@ -12,7 +12,7 @@ from llama_index.core.node_parser import TokenTextSplitter
 
 def parse_url(link: str) -> str:
     try:
-        resp = requests.get(link)
+        resp = requests.get(link, timeout=15.0)
         if resp.status_code != 200:
             print(f"unexpected status code when getting {link}: {resp.status_code}")
             exit(0)
